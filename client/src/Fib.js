@@ -41,7 +41,7 @@ class Fib extends Component {
 
     renderValues() {
         const entries = [];
-
+        console.log(this.state.values)
         for (let key in this.state.values) {
             entries.push(
                 <div key={key}>
@@ -49,6 +49,7 @@ class Fib extends Component {
                 </div>
             );
         }
+        return (entries);
     }
 
     render() {
