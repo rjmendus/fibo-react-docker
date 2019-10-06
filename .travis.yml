@@ -6,7 +6,7 @@ before_install:
   - docker build -t rajatmendus/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true rajatmendus/docker-react npm run test
+  - docker run -e CI=true rajatmendus/react-test npm run test
 
 after_success:
   - docker build -t rajatmendus/multi-client ./client
